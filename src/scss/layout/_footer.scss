@@ -1,0 +1,28 @@
+footer{
+  font-size: 1.3rem;
+  line-height: 1.5;
+  .container{
+    padding: 1.5rem;
+  }
+  ul{
+    margin-bottom: 1.5rem;
+    overflow: hidden;      
+    li{
+      position: relative;
+      float: left;
+      margin: 0 10px;
+      line-height: 1.8;
+      &::before{
+        display: block;
+        content: "";
+        position: absolute;
+        left: -10px;
+        top: 11px;
+        width: 4px;
+        height: 4px;
+        background-color: #aaa;
+        border-radius: 50%;
+      }
+    }
+  }
+}

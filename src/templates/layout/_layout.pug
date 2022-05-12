@@ -1,0 +1,37 @@
+include _setting
+
+block config
+doctype html
+html(lang="ko")
+  head
+    include _head
+  body
+    #wrapper(class=pageSort)
+      // 바로가기 
+      .skip-nav
+        a(href="#start") 본문내용 바로가기
+        a(href="#main-nav") 메인메뉴 바로가기
+      
+      // 헤더 
+      if pageSort == "main"
+        include _header
+      else if pageSort == "sub"
+        include _header
+        include _sub-header
+
+      // 메인 
+      main
+        span.sr-only 메인 컨텐츠
+        if pageSort == "sub"
+          .inner
+            include _sub-tit-sec
+
+            // 컨텐트 
+            .content
+              block content
+        else if pageSort == "main"
+          .content
+            block content
+          
+      // 푸터 
+      include _footer

@@ -14,8 +14,8 @@ var ghPages = require("gulp-gh-pages");
 // 경로
 const routes = {
   pug: {
-    watch: "src/**/*.pug",
-    src: "src/*.pug",
+    watch: "src/templates/**/*.pug",
+    src: "src/templates/*.pug",
     dest: "build",
   },
   img: {
@@ -27,9 +27,13 @@ const routes = {
     src: "src/scss/*.scss",
     dest: "build/css",
   },
+  css: {
+    src: "src/css/*",
+    dest: "build/css",
+  },
   js: {
     watch: "src/js/**/*.js",
-    src: "src/js/main.js",
+    src: "src/js/**/*.js",
     dest: "build/js",
   },
 };
@@ -41,10 +45,7 @@ function clean() {
 
 // build images
 function img() {
-  return gulp
-    .src(routes.img.src)
-    .pipe(image())
-    .pipe(gulp.dest(routes.img.dest));
+  return gulp.src(routes.img.src).pipe(image()).pipe(gulp.dest(routes.img.dest));
 }
 
 // compile pug into html
@@ -63,19 +64,24 @@ function style() {
     .pipe(browserSync.stream());
 }
 
+// library css
+function css() {
+  return gulp.src(routes.css.src).pipe(minifyCSS()).pipe(gulp.dest(routes.css.dest));
+}
+
 // compile modern JS into old JS
 function js() {
-  return gulp
-    .src(routes.js.src)
-    .pipe(
-      bro({
-        transform: [
-          babelify.configure({ presets: ["@babel/preset-env"] }),
-          ["uglifyify", { global: true }],
-        ],
-      })
-    )
-    .pipe(gulp.dest(routes.js.dest));
+  return (
+    gulp
+      .src([routes.js.src, "!js/lib"])
+      // .pipe(
+      //   bro({
+      //     transform: [babelify.configure({ presets: ["@babel/preset-env"] })],
+      //   })
+      // )
+      .pipe(gulp.dest(routes.js.dest))
+      .pipe(browserSync.stream())
+  );
 }
 
 // deploy github pages
@@ -95,7 +101,7 @@ function watch() {
   gulp.watch(routes.js.watch, js).on("change", browserSync.reload);
 }
 
-const prepare = series([clean, img]);
+const prepare = series([clean, img, css]);
 const assets = series([html, style, js]);
 const live = parallel([watch]);
 

@@ -1,0 +1,69 @@
+header
+  // top menu
+  nav.top-menu
+    ul.global-site
+      li.on
+        a(href="index.html") 고양시청
+      li
+        a(href="index.html") 통합예약
+      li
+        a(href="index.html") 고양시의회
+    ul.util-area
+      li.login
+        a(href="#n")
+          i.ico-login 
+          span 로그인
+      li.sns
+        dl
+          dt
+            a(href="#n")
+              span 공식SNS
+          dd.facebook
+            a(href="#n") 페이스북
+          dd.youtube
+            a(href="#n") 유튜브
+          dd.insta
+            a(href="#n") 인스타그램
+          dd.tweet
+            a(href="#n") 트위터
+          dd.tstory
+            a(href="#n") 티스토리
+          dd.blog
+            a(href="#n") 블로그
+      li.lang
+        dl
+          dt
+            a(href="#n") Language
+          dd
+            a(href="#n") ENGLISH
+          dd
+            a(href="#n") JAPANESE
+          dd
+            a(href="#n") CHINESE
+      li.close-btn
+        button
+          .sr-only 닫기
+  // gnb
+  nav.gnb-menu
+    h1.logo
+      a(href="index.html")
+        img(src='img/logo.png' alt='고양시청')
+    button.hamburger-wrap
+      .hamburger
+        .sr-only 전체 메뉴
+  // lnb
+  .lnb-menu
+    ul.dp1-wrap
+      each dp1 in menu.dp1
+        li.dp1(class=dp1.class)
+          a(href=dp1.href)= dp1.name
+          ul.dp2-wrap
+            each dp2 in dp1.dp2 ? dp1.dp2 : [] 
+              li.dp2
+                a(href=dp2.href)= dp2.name
+                ul.dp3-wrap
+                  each dp3 in dp2.dp3 ? dp2.dp3 : []
+                    li.dp3
+                      a(href=dp3.href)= dp3.name
+    
+                

@@ -1,0 +1,14 @@
+extends layout/_layout
+block config
+  - var pageSort = "main";
+
+block content
+  .container
+    section.search-wrap 
+      form
+        span.search-input-box 
+          input(type="text" name="ipt-search" placeholder="검색어를 입력하세요.")
+        span.search-input-btn
+          button(type="submit")
+            .sr-only 검색
+
