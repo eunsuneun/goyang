@@ -1,4 +1,10 @@
 $(function () {
+  header();
+  slickSlider();
+  bookmarkTab();
+});
+
+const header = () => {
   // 햄버거 아이콘 클릭
   $(".hamburger-wrap").on("click", function () {
     $("body").addClass("open");
@@ -40,4 +46,23 @@ $(function () {
       $(".lnb-menu .dp1").eq(dp1Idx).find(".dp2").eq(dp2Idx).toggleClass("on");
     }
   });
-});
+};
+
+const slickSlider = () => {
+  $(".visual-wrap .slide-list").slick({
+    autoplay: true,
+  });
+  $(".news-wrap .slide-list").slick({
+    autoplay: true,
+  });
+};
+
+const bookmarkTab = () => {
+  $(".bookmark-wrap .tab-list li a").on("click", function () {
+    const idx = $(this).parent().index();
+    $(".bookmark-wrap .tab-list li").removeClass("on");
+    $(this).parent().addClass("on");
+    $(".bookmark-wrap .tab-cont-list").removeClass("on");
+    $(".bookmark-wrap .tab-cont-list").eq(idx).addClass("on");
+  });
+};

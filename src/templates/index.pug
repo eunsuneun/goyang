@@ -3,12 +3,344 @@ block config
   - var pageSort = "main";
 
 block content
-  .container
-    section.search-wrap 
+  section.search-wrap 
+    .container
       form
         span.search-input-box 
           input(type="text" name="ipt-search" placeholder="검색어를 입력하세요.")
         span.search-input-btn
           button(type="submit")
             .sr-only 검색
+  
+  section.popular-wrap
+    .container
+      h2.primary-color 인기검색어
+      ul.popular-list
+        li 
+          a(href="#n")
+            span.primary-color # 
+            | 일산동구 연령별 인구통계
+        li 
+          a(href="#n")
+            span.primary-color # 
+            | 고양청년 창업 재정지원 프로그램
+        li 
+          a(href="#n")
+            span.primary-color # 
+            | 재난지원금
+        li 
+          a(href="#n")
+            span.primary-color # 
+            | 지역주택조합
+        li 
+          a(href="#n")
+            span.primary-color # 
+            | 토지거래허가구역 해제
 
+  section.visual-wrap
+    .container
+      .slide-area
+        ul.slide-list 
+          li
+            a(href="#n")
+              img(src="img/main/visual-01.png")
+          li
+            a(href="#n")
+              img(src="img/main/visual-02.png")
+      .mayor-area
+        a(href="#n")
+          img(src="img/main/mayor.png").mayor
+          img(src="img/main/mayor-bg.jpg").mayor-bg
+        ul.mayor-menu
+          li
+            a(href="#n") 
+              i 
+              span 공약과 실천
+          li
+            a(href="#n") 
+              i 
+              span 고양시에 바란다
+      .icon-area
+        ul.icon-list
+          li.building
+            a(href="#n") 
+              p 청사안내
+          li.group
+            a(href="#n") 
+              p 조직안내
+          li.location
+            a(href="#n") 
+              p 찾아오시는 길
+
+  section.bookmark-wrap
+    .container
+      .bookmark-area 
+        ul.tab-list.clearfix
+          li.on
+            a(href="#n") 즐겨찾는 메뉴
+          li 
+            a(href="#n") 민원정보
+          li 
+            a(href="#n") 시민참여
+          li 
+            a(href="#n") 정보공개
+          li 
+            a(href="#n") 온라인 신청
+        .tab-conts 
+          ul.tab-cont-list.on
+            li.bookmark-01
+              a(href="#n")
+                i 
+                span 고양페이
+            li.bookmark-02
+              a(href="#n")
+                i 
+                span 여권발급
+            li.bookmark-03
+              a(href="#n")
+                i 
+                span 대형폐기물 수거
+            li.bookmark-04
+              a(href="#n")
+                i 
+                span 민원상담
+            li.bookmark-05
+              a(href="#n")
+                i 
+                span 직원검색
+            li.bookmark-06
+              a(href="#n")
+                i 
+                span 행사일정
+            li.bookmark-07
+              a(href="#n")
+                i 
+                span 일자리정보
+            li.bookmark-08
+              a(href="#n")
+                i 
+                span 민원서식
+            li.bookmark-09
+              a(href="#n")
+                i 
+                span 통합예약
+          ul.tab-cont-list 
+            li.bookmark-04
+              a(href="#n")
+                i 
+                span 민원상담
+            li.bookmark-10
+              a(href="#n")
+                i 
+                span 정부24시
+            li.bookmark-08
+              a(href="#n")
+                i 
+                span 민원서식
+            li.bookmark-02
+              a(href="#n")
+                i 
+                span 여권발급
+            li.bookmark-11
+              a(href="#n")
+                i 
+                span 무인민권발급기
+            li.bookmark-12
+              a(href="#n")
+                i 
+                span 주정차단속민원
+          ul.tab-cont-list 
+            li.bookmark-13
+              a(href="#n")
+                i 
+                span 자유게시판
+            li.bookmark-14
+              a(href="#n")
+                i 
+                span 칭찬합니다
+            li.bookmark-15
+              a(href="#n")
+                i 
+                span 주민참여예산<br>시민제안
+            li.bookmark-16
+              a(href="#n")
+                i 
+                span 제안합니다
+            li.bookmark-17
+              a(href="#n")
+                i 
+                span 설문조사
+            li.bookmark-18
+              a(href="#n")
+                i 
+                span 온라인서명
+          ul.tab-cont-list 
+            li.bookmark-19
+              a(href="#n")
+                i 
+                span 예산정보
+            li.bookmark-20
+              a(href="#n")
+                i 
+                span 사전정보공개
+            li.bookmark-21
+              a(href="#n")
+                i 
+                span 계약정보공개
+            li.bookmark-22
+              a(href="#n")
+                i 
+                span 정보공개청구
+            li.bookmark-23
+              a(href="#n")
+                i 
+                span 데이터세상
+            li.bookmark-24
+              a(href="#n")
+                i 
+                span 행정자료실
+          ul.tab-cont-list 
+            li.bookmark-09
+              a(href="#n")
+                i 
+                span 민원상담
+            li.bookmark-25
+              a(href="#n")
+                i 
+                span 정부24시
+            li.bookmark-26
+              a(href="#n")
+                i 
+                span 민원서식
+            li.bookmark-27
+              a(href="#n")
+                i 
+                span 여권발급
+            li.bookmark-28
+              a(href="#n")
+                i 
+                span 무인민권발급기
+            li.bookmark-29
+              a(href="#n")
+                i 
+                span 주정차단속민원
+            li.bookmark-18
+              a(href="#n")
+                i 
+                span 대학생 본인부담<br>등록금 지원 신청
+            li.bookmark-09
+              a(href="#n")
+                i 
+                span 경기공유서비스
+      .setting-area
+        button
+          .sr-only 나만의 메뉴 설정
+
+  section.news-wrap
+    .container
+      .newsletter-area 
+        h3.title 고양<br>소식지
+        a(href="#n") 
+          img(src="img/main/news.png", alt="소식지")
+      .article-area 
+        ul.tab-list
+          li.on.prevent-default
+            a(href="#n") 새소식
+          li.prevent-default
+            a(href="#n") 채용공고
+          li.prevent-default
+            a(href="#n") 행사안내
+          li
+            a(href="#n") 고시공고
+          li
+            a(href="#n") 입법예고
+        .tab-conts 
+          .main-article
+            .date-box
+              p.day 16
+              p.year-month 2022.05
+            a(href="#n").text-box
+              p.title (사)경기도장애부모연대 "2022년 발달장애인 가족휴식지원 사업 안내
+              p.desc (사단법인)경기장애인부모연대는 「발달장애인 권리보장 및 지원에 관한 법률」에 근거하여 경기북부지역 거주 발달장애자녀를 둔 가족을 대상으로 심리, 정서적 휴식 제공과 발달장애인가족지원 프로그램을 통해 서로간의 소통 및 가족관계 향상을 돕기 위해 2021년 발달장애인 가족휴식지원 사업을 진행합니다.
+          ul.article-list 
+            li 
+              a(href="#n")
+                p 「고양형 저탄소 신축매입약정 임대주택 민간사업자 공모」 안내  
+                span 2022.05.13
+            li 
+              a(href="#n")
+                p 고양페이 가맹점  「집중등록기간」 운영 안내
+                span 2022.05.12
+            li 
+              a(href="#n")
+                p 반려동물 거주 알림 스티커 배부 안내 
+                span 2022.05.12
+      .slide-area
+        ul.slide-list 
+          li
+            a(href="#n")
+              img(src="img/main/mid-visual-01.png")
+          li
+            a(href="#n")
+              img(src="img/main/mid-visual-02.png")
+
+  section.focus-wrap
+    .container 
+      .board-area 
+        h2.main-title 고양 
+          span 포커스
+        .board-list.clearfix
+          a(href="#n")
+            p “배움을 응원합니다” 함께 배우며 성장하는 즐거움, 고양 평생학습 “배움을 응원합니다” 함께 배우며 성장하는 즐거움, 고양 평생학습
+            span 2022.05.10
+          a(href="#n")
+            p 아이들 지키는 ‘고양’의 공공 울타리
+            span 2022.05.04
+        button.more
+          .sr-only 더 보기
+      .goyangtv-area
+        .goyangtv-list.clearfix
+          <iframe width="252" height="142" src="https://www.youtube.com/embed/BqF1ototqMM?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          a(href="#n").text-box
+            h3 고양 
+              span TV
+            p 고양시 중장년 일자리 박람회 개최 안내
+            span 2022.05.04
+            i 
+        button.more
+          .sr-only 더 보기
+
+  section.call-wrap 
+    .container
+      h2.main-title 민원콜센터
+      p.call-desc 생활 속 다양한 불편 해결을 도와드립니다.  
+      ul.call-list
+        li.icon-kakao
+          a(href="#n") 
+            i
+              img(src="img/main/callcenter_kakao.png", alt="카카오톡 상담")
+            p 카카오톡 상담
+        li.icon-text
+          a(href="#n") 
+            i
+              img(src="img/main/callcenter_message.png", alt="카카오톡 상담")
+            p 문자 상담
+        li.icon-call
+          a(href="#n") 
+            i
+              img(src="img/main/callcenter_call.png", alt="카카오톡 상담")
+            p 전화 상담 예약
+
+  section.hotissue-wrap 
+    .container
+      h2.main-title 고양이 
+        span 확 바뀐다 !
+      ul.hot-list
+        li 
+          a(href="#n")
+            div 
+              img(src="img/main/hot-visual-01.png", alt="출산지원금 확대")
+        li 
+          a(href="#n")
+            div 
+              img(src="img/main/hot-visual-02.jpg", alt="상하수도요금 다자녀 감면 안내")

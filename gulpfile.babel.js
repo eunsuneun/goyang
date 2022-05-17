@@ -14,12 +14,12 @@ var ghPages = require("gulp-gh-pages");
 // 경로
 const routes = {
   pug: {
-    watch: "src/templates/**/*.pug",
+    watch: "src/templates/**/*",
     src: "src/templates/*.pug",
     dest: "build",
   },
   img: {
-    src: "src/img/*",
+    src: "src/img/**/*",
     dest: "build/img",
   },
   scss: {
