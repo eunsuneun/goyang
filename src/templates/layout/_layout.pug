@@ -17,18 +17,18 @@ html(lang="ko")
         include _header
       else if pageSort == "sub"
         include _header
-        include _sub-header
+        include _sub-top
 
       // 메인 
       main
-        span.sr-only 메인 컨텐츠
         if pageSort == "sub"
-          .inner
-            include _sub-tit-sec
-
-            // 컨텐트 
-            .content
-              block content
+          // 컨텐트 
+          .content
+            //- 서브 타이틀
+            .sub-title
+              h3.title= subTitle
+              p.desc= subDesc
+            block content
         else if pageSort == "main"
           .content
             block content

@@ -2,6 +2,7 @@ $(function () {
   header();
   slickSlider();
   bookmarkTab();
+  subInfoAccordion();
 });
 
 const header = () => {
@@ -64,5 +65,40 @@ const bookmarkTab = () => {
     $(this).parent().addClass("on");
     $(".bookmark-wrap .tab-cont-list").removeClass("on");
     $(".bookmark-wrap .tab-cont-list").eq(idx).addClass("on");
+  });
+};
+
+const subInfoAccordion = () => {
+  $(".sub-info-accordion").addClass("open");
+  $(".sub-info-accordion .cont").addClass("open");
+  $(".sub-info-accordion .title").on("click", function () {
+    $(this).parent().toggleClass("open");
+    $(this).parent().find(".cont").toggleClass("open");
+
+    // sub-info-accordion > title의 border
+    if ($(this).parent().hasClass("open")) {
+      $(this).animate(
+        {
+          borderWidth: "1px",
+        },
+        0
+      );
+    } else {
+      $(this).animate(
+        {
+          borderWidth: "0",
+        },
+        200
+      );
+    }
+
+    // sub-info-accordion의 cont
+    if ($(this).parent().find(".cont").hasClass("open")) {
+      console.log("오픈됨");
+      $(this).parent().find(".cont").slideDown(200);
+    } else {
+      console.log("닫힘");
+      $(this).parent().find(".cont").slideUp(200);
+    }
   });
 };

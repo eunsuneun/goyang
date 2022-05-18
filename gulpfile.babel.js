@@ -14,7 +14,7 @@ var ghPages = require("gulp-gh-pages");
 // 경로
 const routes = {
   pug: {
-    watch: "src/templates/**/*",
+    watch: "src/templates/**/*.pug",
     src: "src/templates/*.pug",
     dest: "build",
   },

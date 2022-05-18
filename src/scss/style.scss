@@ -9,7 +9,6 @@
 @import "base/_reset";
 @import "base/_variables";
 @import "base/_accessibility";
-@import "base/_base";
 
 // layout
 @import "layout/_layout";
@@ -17,7 +16,9 @@
 @import "layout/_footer";
 
 // components
-@import "components/_slide";
+@import "base/_components";
 
 // pages
-@import "pages/_main.scss";
+@import "pages/_main";
+@import "pages/_sub";
+@import "pages/_pages";

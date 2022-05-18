@@ -1,0 +1,23 @@
+section.sub-top 
+  //- 글로벌 타이틀
+  h2.gnb-title
+    .container
+      p.title= gnbTitle
+
+  //- 서브 내비게이션
+  .breadcrumb
+    .container 
+      button(onclick="history.back();").btn-back
+        .sr-only 뒤로가기
+      ul.navigation 
+        each item in lnbLoc 
+          li= item.dept1
+
+      .util 
+        button.share
+          .sr-only 공유하기
+        button.print 
+          .sr-only 인쇄하기
+
+  
+                      
