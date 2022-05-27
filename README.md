@@ -17,4 +17,4 @@
 
 ### 클론 사이트
 
-[클론 페이지](https://eunsuneun.github.io/bbc-covid19-clone/)
+[클론 페이지](https://eunsuneun.github.io/goyang/build/index.html)
