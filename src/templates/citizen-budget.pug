@@ -3,10 +3,10 @@ extends layout/_layout
 block config
   - 
     var pageSort = "sub";
-    var subDesc = "자유게시판 : 평소 생각하고 있던 시정에 대한 창의적 제안이나 참신한 아이디어를 보내주시면 시정발전에 소중한 자료로 활용하겠습니다.";
+    var subDesc = "주민참여예산 : 평소 생각하고 있던 시정에 대한 창의적 제안이나 참신한 아이디어를 보내주시면 시정발전에 소중한 자료로 활용하겠습니다.";
     var depth1Num = 0;
     var depth2Num = 0;
-    var depth3Num = 0;
+    var depth3Num = 3;
     var lnbLoc = [
                     {depth1: menu.dp1[depth1Num].name , depth2: menu.dp1},  
                     {depth1: menu.dp1[depth1Num].dp2[depth2Num].name , depth2: menu.dp1[depth2Num].dp2},
@@ -20,14 +20,14 @@ block config
 block content
   .container(class= pageClass)
     .sub-info-accordion
-      button.title 자유게시판 안내
+      button.title 주민참여예산 안내
         span 
           .sr-only 열기
       .cont
         ul.dot-list
-          li 본 게시판은 시민 여러분의 <span>자유로운 의사를 표현할 수 있는 공간</span>으로 정식민원창구가 아님을 알려드립니다. 담당자의 답변이 필요한 민원성 글은 원활한 민원처리를 위해 정식민원창구인 <span>국민신문고</span>를 이용하시기 바랍니다.
-          li 게시판 이용 시 <span>실명을 원칙</span>으로 하며, <span>주민등록번호, 연락처 등과 같은 개인정보</span>를 등록하실 경우 개인정보노출에 따른 피해를 입을 수 있으니, <span>개인정보 기재를 금지</span>해 주시기 바랍니다.
-          li 게시물의 등록으로 인하여 발생하는 모든 문제는 게시자가 전적으로 민,형사상의 책임을 지시게 됨을 알려드립니다.
+          li 타인의 모범이 될만한 친절한 공무원이나 우리들의 평범한 일상 속에서 어려운 이웃과 함께하는 타인의 모범이 되는 분 또는 내용을 소개하고 칭찬하는 게시판입니다. 말로 전하기 쑥스러운 마음을 글로 옮겨주세요.
+          li 게시판 이용 시 <span>실명을 원칙</span>으로 하며, <span>주민등록번호, 연락처 등과 같은 개인정보를 등록하실 경우</span>  개인정보노출에 따른 피해를 입을 수 있으니, <span>개인정보 기재를 금지</span>해 주시기 바랍니다.
+          li <span>시민 여러분의 많은 참여 부탁 드립니다.</span>
           li 효율적인 게시판 운영을 위하여 게시글은 <span>1년간 보관</span>됩니다.
     .free-board.
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure est porro fugit laboriosam quae non suscipit ipsum eaque quia sunt pariatur laborum voluptas, atque soluta tempora, qui animi tempore. Eum.
@@ -40,4 +40,3 @@ block content
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit optio nesciunt deleniti doloremque laudantium corporis a adipisci, itaque voluptates autem, ad alias tenetur fuga labore consequatur provident animi beatae maxime?
       Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis excepturi eius sint nisi nihil optio! Sed esse expedita officiis ea modi ipsum harum dolorum ut. Quis, soluta quibusdam. Cum, temporibus!
       Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis, perspiciatis nobis, esse porro eum sequi quae et perferendis vitae quasi consequuntur quis magnam nihil ipsum non laudantium delectus fuga? Sequi.
-      

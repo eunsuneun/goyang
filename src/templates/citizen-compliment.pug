@@ -2,19 +2,23 @@ extends layout/_layout
 
 block config
   - 
-    var pageTitle = "자유게시판 : 고양시청 > 시민소통 > 시민의소리 > 칭찬합니다";
     var pageSort = "sub";
-    var gnbTitle = "시민소통";
-    var subTitle = "칭찬합니다";
-    var subDesc = "타인의 모범이 될만한 친절한 공무원이나 우리들의 평범한 일상 속에서 어려운 이웃과 함께하는 타인의 모범이 되는 분 또는 내용을 소개하고 칭찬하는 게시판입니다";
+    var subDesc = "칭찬합니다 : 평소 생각하고 있던 시정에 대한 창의적 제안이나 참신한 아이디어를 보내주시면 시정발전에 소중한 자료로 활용하겠습니다.";
+    var depth1Num = 0;
+    var depth2Num = 0;
+    var depth3Num = 1;
     var lnbLoc = [
-                    {dept1: menu.dp1[0].name , dept2: menu.dp1},  
-                    {dept1: menu.dp1[0].dp2[0].name , dept2: menu.dp1[0].dp2},
-                    {dept1: menu.dp1[0].dp2[0].dp3[1].name , dept2: menu.dp1[0].dp2[0].dp3},
+                    {depth1: menu.dp1[depth1Num].name , depth2: menu.dp1},  
+                    {depth1: menu.dp1[depth1Num].dp2[depth2Num].name , depth2: menu.dp1[depth2Num].dp2},
+                    {depth1: menu.dp1[depth1Num].dp2[depth2Num].dp3[depth3Num].name , depth2: menu.dp1[depth1Num].dp2[depth2Num].dp3},
                   ];
+    var pageTitle = lnbLoc[2].depth1 +' : 고양시청 > '+ lnbLoc[0].depth1 +' > '+ lnbLoc[1].depth1;
+    var gnbTitle = lnbLoc[0].depth1;
+    var subTitle = lnbLoc[2].depth1;
+    var pageClass = lnbLoc[2].depth2[depth3Num].class;
 
 block content
-  .container.citizen-board
+  .container(class= pageClass)
     .sub-info-accordion
       button.title 칭찬합니다 안내
         span 
