@@ -2,7 +2,7 @@
 
 <br>
 
-- 기본 언어 : html,css,js
+- 기본 언어 : html, css, js
 - 전처리기 : pug, scss
 - 번들러 : gulp
 - 환경 : node, git
